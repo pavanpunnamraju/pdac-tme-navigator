@@ -35,6 +35,28 @@ each other's territory, or the project quietly expanding beyond what was actuall
 approved (e.g., someone starting patient-level outcome modeling, which the design doc
 explicitly rules out given n=8). Flag it plainly.
 
+## Current Status
+
+Update this section at the end of each session (or when the human asks) — it's the
+live status board, separate from the Learnings log below (which is for reusable lessons,
+not state). Overwrite stale entries rather than letting them accumulate; this section
+should always reflect *now*, not a history.
+
+- **Design**: approved, documented at `docs/plans/2026-07-17-pdac-tme-navigator-design.md`.
+- **Agent docs**: all four in place — `codebase-agent.md`, `logic-agent.md`,
+  `big-picture-agent.md` (this file), `git-agent.md`. UI agent intentionally not yet
+  scaffolded (idle until a later phase per the design doc).
+- **Pipeline (steps 1-5, Week 1 milestone)**: not started. An earlier attempt to build
+  this via an autonomously-spawned background agent was killed by the human before
+  producing any code — that approach is now explicitly disallowed (see Constraints
+  below). No `src/` directory exists yet.
+- **Reference dataset (Zenodo 6024273)**: identified and locked in per the design doc,
+  not yet downloaded/verified locally.
+- **Next concrete step**: start a session against `codebase-agent.md` to build pipeline
+  steps 1-5 (ingest → QC → normalize → integrate → classifier), human-driven.
+- **Blockers**: none currently — waiting on the human to kick off the next build
+  session.
+
 ## Constraints (learned, not optional)
 
 - **No autonomous agent spawning.** Early in this project a background agent was
