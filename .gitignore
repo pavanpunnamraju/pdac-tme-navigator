@@ -1,0 +1,18 @@
+# Raw patient-derived data — never commit
+FNA_scRNA _JJL/
+
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Data / model artifacts
+*.h5ad
+*.pkl
+*.ckpt
+data/external/
