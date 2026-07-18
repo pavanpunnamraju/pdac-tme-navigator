@@ -1,5 +1,6 @@
 # Raw patient-derived data — never commit
-FNA_scRNA _JJL/
+# (no trailing slash: matches a symlink to the dir, not just a real dir)
+FNA_scRNA _JJL
 
 # OS
 .DS_Store
@@ -7,8 +8,8 @@ FNA_scRNA _JJL/
 # Python
 __pycache__/
 *.pyc
-.venv/
-venv/
+.venv
+venv
 *.egg-info/
 
 # Data / model artifacts
