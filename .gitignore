@@ -25,3 +25,6 @@ data/processed/*
 !data/processed/composition.csv
 !data/processed/subtype_scores.csv
 !data/processed/gene_resolution.json
+!data/processed/therapy_notes.csv
+!data/processed/therapy_notes.json
+!data/processed/therapy_notes_report.md
