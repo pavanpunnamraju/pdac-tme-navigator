@@ -21,4 +21,5 @@ venv
 data/external/
 data/reference/
 data/models/
-data/processed/
+data/processed/*
+!data/processed/composition.csv
