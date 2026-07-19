@@ -23,3 +23,5 @@ data/reference/
 data/models/
 data/processed/*
 !data/processed/composition.csv
+!data/processed/subtype_scores.csv
+!data/processed/gene_resolution.json

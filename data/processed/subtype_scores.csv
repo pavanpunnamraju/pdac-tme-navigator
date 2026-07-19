@@ -1,0 +1,9 @@
+sample,n_ductal2,n_classical,n_basal,pct_classical,majority_call,confidence
+MK362,4118,3996,122,97.03739679456046,classical,standard
+MK371,2373,1344,1029,56.63716814159292,classical,standard
+BW21,2003,241,1762,12.031952071892162,basal,standard
+AM67,1642,1626,16,99.02557856272838,classical,standard
+MK359,1180,667,513,56.525423728813564,classical,standard
+MK364,526,447,79,84.9809885931559,classical,standard
+MK447,67,57,10,85.07462686567165,classical,low (n barely clears floor)
+MK336,13,10,3,,"insufficient cells, no call",n/a
