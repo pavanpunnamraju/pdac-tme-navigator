@@ -37,6 +37,13 @@ malignant-cell subtype calls, and CAF subtype calls already assigned. Used purel
 labeled training set for the cell-type classifier — not part of the pipeline's own
 identity or claims.
 
+Note: the deposit's finer files (`CAF_subset.rds`, `Malignant_cell_clusters.rds`, etc.)
+are not currently ingested — Step 5 exports and trains on `pk_all.rds` only, giving a
+10-category coarse cell-type taxonomy (no myCAF/iCAF/apCAF or macrophage-subtype
+resolution). This was a deliberate v1 scope decision (see Pipeline table, Step 8), not a
+data limitation — the finer files exist and remain a documented option for a later
+iteration.
+
 ## Pipeline
 
 | Step | What happens | Tooling |
@@ -48,7 +55,7 @@ identity or claims.
 | 5. Cell-type classifier (ML core) | Train supervised classifier on Zenodo 6024273 reference labels, apply to local cells. Eval via held-out split of the reference (F1/accuracy); baseline = naive marker-threshold heuristic | scikit-learn/LightGBM |
 | 6. Composition | Aggregate predicted cell types into per-patient TME composition breakdown | pandas |
 | 7. Subtype scoring | Score malignant cells against Moffitt classical/basal-like gene signatures | `scanpy.tl.score_genes` |
-| 8. Therapy rules | Lookup table: (subtype, dominant TME pattern) → literature-backed therapeutic considerations, cited | plain Python rules engine |
+| 8. Therapy rules | Lookup table: (subtype, dominant TME pattern) → literature-backed therapeutic considerations, cited. v1 scope: coarse TME patterns only (bulk fibroblast/macrophage/T-cell composition), not CAF/macrophage subtypes — see reference dataset note above. Finer subtyping (myCAF/iCAF/apCAF via `CAF_subset.rds`, SPP1+ macrophage via marker scoring) is a deferred future iteration, not in v1. | plain Python rules engine |
 | 9. Report | Per-patient summary: composition chart + subtype call + therapy notes | notebook/script output, no UI in v1 |
 
 ## Success criteria

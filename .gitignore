@@ -16,4 +16,9 @@ venv
 *.h5ad
 *.pkl
 *.ckpt
+*.rds
+*.mtx
 data/external/
+data/reference/
+data/models/
+data/processed/
