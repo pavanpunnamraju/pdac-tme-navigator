@@ -1,3 +1,6 @@
+# Docs kept local, not tracked
+docs/
+
 # Raw patient-derived data — never commit
 # (no trailing slash: matches a symlink to the dir, not just a real dir)
 FNA_scRNA _JJL
